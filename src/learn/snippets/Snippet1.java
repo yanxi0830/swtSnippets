@@ -21,12 +21,17 @@ import org.eclipse.swt.widgets.*;
 public class Snippet1 {
 
 public static void main (String [] args) {
+	// Create Display and Shell
 	Display display = new Display ();
 	Shell shell = new Shell(display);
-	shell.open ();
-	while (!shell.isDisposed ()) {
-		if (!display.readAndDispatch ()) display.sleep ();
+	
+	// Open the Shell and main loop
+	shell.open();
+	while (!shell.isDisposed()) {
+		if (!display.readAndDispatch()) {
+			display.sleep();
+		}
 	}
-	display.dispose ();
+	display.dispose();
 }
 }
